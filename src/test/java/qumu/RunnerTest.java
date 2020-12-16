@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = ".",
         glue = {"qumu"},
-        tags = {"@API"},
+        tags = {"@UIT"},
         monochrome=true,
         format = {
                 "pretty",

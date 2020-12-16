@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1442920460,
+              "duration": 2002245500,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Should see LIST USERS of all existing users",
+        "line": 5,
+        "name": "Check item total cost and tax",
         "description": "",
-        "id": "api-test;should-see-list-users-of-all-existing-users",
+        "id": "checkout-items-in-the-basket;check-item-total-cost-and-tax",
         "after": [
           {
             "result": {
-              "duration": 468930460,
+              "duration": 602329841,
               "status": "passed"
             },
             "match": {
@@ -34,59 +34,289 @@
         "steps": [
           {
             "result": {
-              "duration": 138147588,
+              "duration": 354051467,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I get the default list of users for on 1st page",
+            "line": 6,
+            "name": "I am on the home page",
             "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 39
-                }
-              ],
-              "location": "StepDefinition.i_get_the_default_list_of_users_for_on_st_page(int)"
+              "location": "UITestStepDefinitions.iAmOnTheHomePage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 17940,
+              "duration": 440477297,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I get the list of all users within every page",
+            "line": 7,
+            "name": "I login in with the following details",
             "match": {
-              "location": "StepDefinition.iGetTheListOfAllUsers()"
+              "location": "UITestStepDefinitions.i_login_in_with_the_following_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "userName",
+                  "Password"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "standard_user",
+                  "secret_sauce"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1395151290,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I add the following items to the basket",
+            "match": {
+              "location": "UITestStepDefinitions.i_add_the_following_items_to_the_basket(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Sauce Labs Backpack"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Sauce Labs Fleece Jacket"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Sauce Labs Bolt T-Shirt"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Sauce Labs Onesie"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25619507,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I  should see 4 items added to the shopping cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 14
+                }
+              ],
+              "location": "UITestStepDefinitions.i_should_see_items_added_to_the_shopping_cart(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84339526,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "I click on the shopping cart",
+            "match": {
+              "location": "UITestStepDefinitions.i_click_on_the_shopping_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51747349,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I verify that the QTY count for each item should be 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 52
+                }
+              ],
+              "location": "UITestStepDefinitions.i_verify_that_the_QTY_count_for_each_item_should_be(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84690016,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I remove the following item:",
+            "match": {
+              "location": "UITestStepDefinitions.i_remove_the_following_item(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Sauce Labs Fleece Jacket"
+                ],
+                "line": 21
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13727604,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I  should see 3 items added to the shopping cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 14
+                }
+              ],
+              "location": "UITestStepDefinitions.i_should_see_items_added_to_the_shopping_cart(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 78520181,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I click on the CHECKOUT button",
+            "match": {
+              "location": "UITestStepDefinitions.i_click_on_the_CHECKOUT_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56211119,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I type \"FirstName\" for First Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "FirstName",
+                  "offset": 8
+                }
+              ],
+              "location": "UITestStepDefinitions.i_type_for_First_Name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43944608,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I type \"LastName\" for Last Name",
+            "match": {
+              "arguments": [
+                {
+                  "val": "LastName",
+                  "offset": 8
+                }
+              ],
+              "location": "UITestStepDefinitions.i_type_for_Last_Name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 44087817,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I type \"EC1A 9JU\" for ZIP/Postal Code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "EC1A 9JU",
+                  "offset": 8
+                }
+              ],
+              "location": "UITestStepDefinitions.i_type_for_ZIP_Postal_Code(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 78486200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I click on the CONTINUE button",
+            "match": {
+              "location": "UITestStepDefinitions.i_click_on_the_CONTINUE_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 13778,
+              "duration": 57623409,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I should see total users count equals the number of user ids",
+            "line": 29,
+            "name": "Item total will be equal to the total of items on the list",
             "match": {
-              "location": "StepDefinition.iShouldMatchTotalCount()"
+              "location": "UITestStepDefinitions.item_total_will_be_equal_to_the_total_of_items_on_the_list()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39426085,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "a Tax rate of 8 % is applied to the total",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 14
+                }
+              ],
+              "location": "UITestStepDefinitions.a_Tax_rate_of_is_applied_to_the_total(int)"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@API"
+            "line": 4,
+            "name": "@UIT"
           }
         ]
       }
     ],
-    "name": "API test",
-    "description": "",
-    "id": "api-test",
+    "name": "Checkout items in the basket",
+    "description": "Please use home page of https://www.saucedemo.com/",
+    "id": "checkout-items-in-the-basket",
     "keyword": "Feature",
-    "uri": "target/test-classes/API-Test.feature"
+    "uri": "target/test-classes/UI-Test.feature"
   }
 ]

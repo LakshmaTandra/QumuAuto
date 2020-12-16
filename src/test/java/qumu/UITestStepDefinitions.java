@@ -4,6 +4,11 @@ import java.util.List;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
 import junit.framework.Assert;
+import pages.CheckoutOverviewPage;
+import pages.CheckoutPage;
+import pages.HomePage;
+import pages.ProductsPage;
+import pages.ShoppingCartPage;
 
 public class UITestStepDefinitions extends BasePage {
 
