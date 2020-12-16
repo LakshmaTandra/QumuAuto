@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testng-results failed="0" passed="1" skipped="0" total="1">
+<suite duration-ms="2050" name="cucumber.runtime.formatter.TestNGFormatter">
+<test duration-ms="2050" name="cucumber.runtime.formatter.TestNGFormatter">
+<class name="API test">
+<test-method duration-ms="2050" finished-at="2020-12-15T23:48:28Z" name="Should see LIST USERS of all existing users" started-at="2020-12-15T23:48:26Z" status="PASS"/>
+</class>
+</test>
+</suite>
+</testng-results>

@@ -1,0 +1,92 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1442920460,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.initializeTest()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Should see LIST USERS of all existing users",
+        "description": "",
+        "id": "api-test;should-see-list-users-of-all-existing-users",
+        "after": [
+          {
+            "result": {
+              "duration": 468930460,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.screenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 138147588,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get the default list of users for on 1st page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 39
+                }
+              ],
+              "location": "StepDefinition.i_get_the_default_list_of_users_for_on_st_page(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17940,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I get the list of all users within every page",
+            "match": {
+              "location": "StepDefinition.iGetTheListOfAllUsers()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13778,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see total users count equals the number of user ids",
+            "match": {
+              "location": "StepDefinition.iShouldMatchTotalCount()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@API"
+          }
+        ]
+      }
+    ],
+    "name": "API test",
+    "description": "",
+    "id": "api-test",
+    "keyword": "Feature",
+    "uri": "target/test-classes/API-Test.feature"
+  }
+]
